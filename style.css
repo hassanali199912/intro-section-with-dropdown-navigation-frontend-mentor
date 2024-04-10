@@ -1,0 +1,394 @@
+@font-face {
+    font-family: "Epilogue";
+    src: url("https://fonts.google.com/specimen/Epilogue")
+}
+
+:root {
+    --Almost--White: hsl(0, 0%, 98%);
+    --Medium--Gray: hsl(0, 0%, 41%);
+    --Almost--Black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+}
+
+.challenge-10 {
+    background-color: var(--Almost--White);
+    height: 100vh;
+    padding: 2rem;
+}
+
+
+
+/*==================================
+            Header
+====================================*/
+
+
+/*#region header*/
+
+
+
+.challenge-10 .header {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.burger, .close-btn {
+    display: none;
+}
+
+.challenge-10 .header .logo h1 {
+    font-size: 2.0rem;
+    color: var(--Almost--Black);
+}
+
+.challenge-10 .header .nav {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.challenge-10 .header .nav .dropdown {
+    display: none;
+    opacity: 0;
+    list-style: none;
+    margin-top: 0.5rem;
+    transition: all 0.5s ease;
+    position: absolute;
+    background-color: var(--Almost--White);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: max-content;
+
+}
+
+.challenge-10 .header .nav .dropdown li {
+    margin-bottom: 1rem;
+}
+
+.challenge-10 .header .nav .dropdown li a {
+    padding: 0.5rem 0.5rem;
+
+}
+
+.challenge-10 .header .nav .dropdown li:last-child {
+    margin-bottom: 0rem;
+}
+
+
+
+.challenge-10 .header .nav .nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.challenge-10 .header .nav .nav-list li {
+    margin-right: 1.5rem;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.challenge-10 .header .nav .nav-list .dropdown li {
+    padding: 0;
+}
+
+.challenge-10 .header .nav .nav-list li a {
+    text-decoration: none;
+    color: var(--Medium--Gray);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.5s ease;
+}
+
+.challenge-10 .header .nav .nav-list li a img {
+    transition: all 0.5s ease;
+}
+
+.challenge-10 .header .nav .nav-list li a:hover {
+    color: var(--Almost--Black);
+}
+
+.challenge-10 .header .nav .nav-list li.show a img {
+    transform: rotate(180deg);
+}
+
+.challenge-10 .header .nav .nav-list li.show .dropdown {
+    height: auto;
+}
+
+.challenge-10 .header .nav .nav-list li.show .dropdown {
+    display: block;
+    opacity: 1;
+}
+
+.challenge-10 .header .nav .btns button {
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--Medium--Gray);
+    border-radius: 1rem;
+    color: var(--Medium--Gray);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: transparent;
+}
+
+.challenge-10 .header .nav .btns button:first-child {
+    border-color: transparent;
+}
+
+.challenge-10 .header .nav .btns button:hover {
+    color: var(--Almost--Black);
+    border-color: var(--Almost--Black);
+}
+
+.challenge-10 .header .nav .btns button:first-child:hover {
+    color: var(--Almost--Black);
+    border-color: transparent;
+}
+
+
+/*#endregion header*/
+
+
+/*==================================
+            Hero Section
+====================================*/
+
+
+/*#region Hero Section*/
+
+
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 3rem auto;
+
+}
+
+.hero>div {
+
+    flex-basis: 50%;
+}
+
+.hero .hero-img {
+    display: flex;
+    justify-content: center;
+}
+
+.hero .hero-img img {
+    width: 400px;
+}
+
+.hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero .hero-content h1 {
+    font-size: 5rem;
+    color: var(--Almost--Black);
+}
+
+.hero .hero-content h1 span {
+    display: block;
+}
+
+.hero .hero-content p {
+    font-size: 1.2rem;
+    color: var(--Medium--Gray);
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.hero .hero-content .btn {
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 200px;
+    border: 1px solid var(--Medium--Gray);
+    border-radius: 1rem;
+    color: var(--Almost--White);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: var(--Almost--Black);
+
+}
+
+.hero .hero-content .btn:hover {
+    color: var(--Almost--Black);
+    border-color: var(--Almost--Black);
+    background-color: var(--Almost--White);
+}
+
+.hero .hero-content .clients {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*#endregion Hero Section*/
+
+
+
+/*==================================
+         Responsive Design
+====================================*/
+
+/*#region tablet styles*/
+
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+
+    .hero .hero-content h1 {
+        font-size: 3rem;
+        color: var(--Almost--Black);
+    }
+
+    .hero .hero-content p {
+        font-size: 1rem;
+        max-width: 400px;
+    }
+}
+
+/*#endregion tables styles*/
+
+/*#region mobile style*/
+
+@media only screen and (max-width:767px) {
+    .challenge-10 {
+        padding: 0;
+    }
+
+    .burger, .close-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+/*==================================
+            Header Section
+====================================*/
+    .challenge-10 .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .challenge-10 .header .close-btn {
+        padding: 1rem;
+        align-self: flex-end;
+    }
+
+    .challenge-10 .header .nav {
+        position: fixed;
+        width: 50vw;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 1rem;
+        transition: all 0.5s ease;
+        justify-content: flex-start;
+        transform: translate(50vw);
+        transition: all 0.5s ease;
+
+    }
+
+    .challenge-10 .header .nav.active {
+        transform: translate(0);
+        box-shadow: 0px 0px 10px 300px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .challenge-10 .header .nav .nav-list,
+    .challenge-10 .header .nav .btns {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .challenge-10 .header .nav .nav-list .dropdown {
+        position: relative;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+
+    .challenge-10 .header .nav .btns button {
+        width: 100%;
+
+    }
+
+
+
+    /*==================================
+            Hero Section
+====================================*/
+
+
+    .hero {
+        max-width: 1200px;
+        margin: 3rem 0;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .hero .hero-img {
+        width: 100%;
+    }
+
+    .hero .hero-img img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .hero .hero-content {
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 2.5rem;
+
+    }
+
+    .hero .hero-content h1 span {
+        display: inline;
+    }
+
+    .hero .hero-content p {
+        font-size: 0.9rem;
+        max-width: 400px;
+    }
+
+    .hero .hero-content .btn {
+        margin: auto;
+    }
+
+}
+
+/*#endregion mobile style*/
