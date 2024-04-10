@@ -16,6 +16,10 @@
     font-family: "Epilogue", sans-serif;
 }
 
+body {
+    background-color: var(--Almost--White);
+}
+
 .challenge-10 {
     background-color: var(--Almost--White);
     height: 100vh;
@@ -285,7 +289,7 @@
         cursor: pointer;
     }
 
-/*==================================
+    /*==================================
             Header Section
 ====================================*/
     .challenge-10 .header {
